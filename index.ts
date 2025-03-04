@@ -16,3 +16,19 @@ nilai.push(22);
 let arrayKosong: [] = [];
 
 // tipe data object
+let santri: {
+  nama: string;
+  umur: number;
+  alamat: string;
+  nilai: number;
+  isLulus?: boolean;
+} = {
+  nama: "Alfian",
+  umur: 20,
+  alamat: "Jakarta",
+  nilai: 90,
+};
+santri.alamat = "Bandung";
+santri.isLulus = true;
+
+// tipe data array of object

@@ -13,5 +13,13 @@ let alamat = ["Jakarta", "Bandung", "Bogor"];
 let mix = ["Budi", 24, "Semarang"];
 nilai.push(22);
 let arrayKosong = [];
-console.log(nilai);
-console.log(arrayKosong);
+// tipe data object
+let santri = {
+    nama: "Alfian",
+    umur: 20,
+    alamat: "Jakarta",
+    nilai: 90,
+};
+santri.alamat = "Bandung";
+santri.isLulus = true;
+console.log(santri);
