@@ -35,7 +35,26 @@ let pensil = { id: 3, item: "Pensil", harga: 5000 };
 let items = [book, pen, pensil];
 items[1].harga = 3000;
 //  membuat function di ts
-function hitung(a, b) {
-    return a * b;
+// dengan parameter
+function sapa(nama) {
+    return `Hello ${nama} \n`;
 }
-console.log(hitung(3, 3));
+// tanpa parameter
+function hello() {
+    return `Hello World \n`;
+}
+// default parameter
+function sapa2(nama = "World") {
+    return `Hello ${nama} \n`;
+}
+// optional parameter
+function discountItem(price, discount) {
+    return price - (discount || 0);
+}
+// void function
+function pesan(message) {
+    console.log(message);
+}
+pesan("Pesan 1");
+pesan("Pesan 2");
+pesan("Pesan 3");

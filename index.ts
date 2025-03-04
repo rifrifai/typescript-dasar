@@ -50,7 +50,26 @@ let items: {
 items[1].harga = 3000;
 
 //  membuat function di ts
-function hitung(a: number, b: number): number {
-  return a * b;
+// dengan parameter
+function sapa(nama: string): string {
+  return `Hello ${nama} \n`;
 }
-console.log(hitung(3, 3));
+// tanpa parameter
+function hello(): string {
+  return `Hello World \n`;
+}
+// default parameter
+function sapa2(nama: string = "World"): string {
+  return `Hello ${nama} \n`;
+}
+// optional parameter
+function discountItem(price: number, discount?: number): number {
+  return price - (discount || 0);
+}
+// void function
+function pesan(message: string): void {
+  console.log(message);
+}
+pesan("Pesan 1");
+pesan("Pesan 2");
+pesan("Pesan 3");
