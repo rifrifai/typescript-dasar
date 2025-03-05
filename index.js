@@ -55,6 +55,40 @@ function discountItem(price, discount) {
 function pesan(message) {
     console.log(message);
 }
-pesan("Pesan 1");
-pesan("Pesan 2");
-pesan("Ini pesan biasa");
+const adi = {
+    id: 1,
+    name: "Adi",
+    isActive: true,
+};
+const budi = {
+    id: 1,
+    name: "Budi",
+    isActive: false,
+    address: "Bandung",
+};
+let tema;
+tema = "light";
+function setTheme(t) {
+    tema = t;
+}
+setTheme("dark");
+const reza = {
+    id: 1234,
+    name: "Reza",
+    age: 20,
+    isLulus: true,
+};
+const ahmad = {
+    id: 456,
+    name: "Joko",
+    age: 18,
+    isLulus: false,
+};
+const biodata1 = {
+    id: 10,
+    name: "Ahmad Trisna",
+    age: 27,
+    address: "Kebumen",
+    isSantri: true,
+};
+console.log(biodata1);
