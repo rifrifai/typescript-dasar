@@ -57,4 +57,4 @@ function pesan(message) {
 }
 pesan("Pesan 1");
 pesan("Pesan 2");
-pesan("Pesan 3");
+pesan("Ini pesan biasa");

@@ -70,6 +70,3 @@ function discountItem(price: number, discount?: number): number {
 function pesan(message: string): void {
   console.log(message);
 }
-pesan("Pesan 1");
-pesan("Pesan 2");
-pesan("Pesan 3");
