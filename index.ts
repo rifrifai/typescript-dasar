@@ -143,6 +143,22 @@ enum Role {
   SuperAdmin,
   Guest,
 }
+enum Status {
+  Success = 200,
+  NotFound = 404,
+  ServerError = 500,
+  BadRequest = 400,
+  Unauthorized = 401,
+}
+const userRole: Role = Role.Admin;
+const userStatus: Status = Status.Success;
 
-const udin: Role = Role.Admin;
-console.log(udin);
+// Tuple adalah tipe data yang memungkinkan kita menyimpan array dengan panjang dan tipe data yang sudah di definisikan
+let Person: [string, number, boolean?, ...string[]] = [
+  "Reza",
+  23,
+  false,
+  "Jakarta",
+  "Bandung",
+];
+console.log(Person);

@@ -99,5 +99,22 @@ var Role;
     Role[Role["SuperAdmin"] = 2] = "SuperAdmin";
     Role[Role["Guest"] = 3] = "Guest";
 })(Role || (Role = {}));
-const udin = Role.Admin;
-console.log(udin);
+var Status;
+(function (Status) {
+    Status[Status["Success"] = 200] = "Success";
+    Status[Status["NotFound"] = 404] = "NotFound";
+    Status[Status["ServerError"] = 500] = "ServerError";
+    Status[Status["BadRequest"] = 400] = "BadRequest";
+    Status[Status["Unauthorized"] = 401] = "Unauthorized";
+})(Status || (Status = {}));
+const userRole = Role.Admin;
+const userStatus = Status.Success;
+// Tuple adalah tipe data yang memungkinkan kita menyimpan array dengan panjang dan tipe data yang sudah di definisikan
+let Person = [
+    "Reza",
+    23,
+    false,
+    "Jakarta",
+    "Bandung",
+];
+console.log(Person);
