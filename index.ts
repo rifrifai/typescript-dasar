@@ -161,4 +161,8 @@ let Person: [string, number, boolean?, ...string[]] = [
   "Jakarta",
   "Bandung",
 ];
-console.log(Person);
+
+// import export module
+import { add, multiple } from "./utils/MathUtils";
+console.log(add(3, 3));
+console.log(multiple(3, 3));

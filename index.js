@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // tipe data in ts
 let nama = "Alfian";
 let panjang = nama.length;
@@ -117,4 +118,7 @@ let Person = [
     "Jakarta",
     "Bandung",
 ];
-console.log(Person);
+// import export module
+const MathUtils_1 = require("./utils/MathUtils");
+console.log((0, MathUtils_1.add)(3, 3));
+console.log((0, MathUtils_1.multiple)(3, 3));
