@@ -91,4 +91,13 @@ const biodata1 = {
     address: "Kebumen",
     isSantri: true,
 };
-console.log(biodata1);
+// enum adalah tipe data yang digunakan untuk mendefinisikan sekumpulan nilai konstan atau tetap
+var Role;
+(function (Role) {
+    Role[Role["Admin"] = 0] = "Admin";
+    Role[Role["User"] = 1] = "User";
+    Role[Role["SuperAdmin"] = 2] = "SuperAdmin";
+    Role[Role["Guest"] = 3] = "Guest";
+})(Role || (Role = {}));
+const udin = Role.Admin;
+console.log(udin);

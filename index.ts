@@ -135,3 +135,14 @@ const biodata1: Biodata = {
   address: "Kebumen",
   isSantri: true,
 };
+
+// enum adalah tipe data yang digunakan untuk mendefinisikan sekumpulan nilai konstan atau tetap
+enum Role {
+  Admin,
+  User,
+  SuperAdmin,
+  Guest,
+}
+
+const udin: Role = Role.Admin;
+console.log(udin);
