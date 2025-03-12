@@ -164,5 +164,20 @@ let Person: [string, number, boolean?, ...string[]] = [
 
 // import export module
 import { add, multiple } from "./utils/MathUtils";
-console.log(add(3, 3));
-console.log(multiple(3, 3));
+// console.log(add(3, 3));
+// console.log(multiple(3, 3));
+
+// generic memungkinkan kita menulis fungsi, class atau interface yang dapat bekerja dengan berbagai tipe data tanpa menentukan tipe spesifik yang membuat kode lebih fleksibel dan dapat digunakan kembali tanpa kehilangan keamanan tipe data
+function getDateString(value: string): string {
+  return value;
+}
+function getDataNumber(value: number): number {
+  return value;
+}
+// di atas ribet kebanyakan value, dibawah menggunakan generic
+function getNilai<T>(value: T): T {
+  return value;
+}
+// console.log(getNilai<string>("Joko Widodo"));
+// console.log(getNilai<number>(99));
+// console.log(getNilai<boolean>(false));

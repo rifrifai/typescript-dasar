@@ -118,7 +118,18 @@ let Person = [
     "Jakarta",
     "Bandung",
 ];
-// import export module
-const MathUtils_1 = require("./utils/MathUtils");
-console.log((0, MathUtils_1.add)(3, 3));
-console.log((0, MathUtils_1.multiple)(3, 3));
+// console.log(add(3, 3));
+// console.log(multiple(3, 3));
+// generic memungkinkan kita menulis fungsi, class atau interface yang dapat bekerja dengan berbagai tipe data tanpa menentukan tipe spesifik yang membuat kode lebih fleksibel dan dapat digunakan kembali tanpa kehilangan keamanan tipe data
+function getDateString(value) {
+    return value;
+}
+function getDataNumber(value) {
+    return value;
+}
+// di atas ribet kebanyakan value, dibawah menggunakan generic
+function getNilai(value) {
+    return value;
+}
+console.log(getNilai("Joko Widodo"));
+console.log(getNilai(99));
