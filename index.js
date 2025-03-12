@@ -131,5 +131,13 @@ function getDataNumber(value) {
 function getNilai(value) {
     return value;
 }
-console.log(getNilai("Joko Widodo"));
-console.log(getNilai(99));
+// console.log(getNilai<string>("Joko Widodo"));
+function getData(params, params2) {
+    return Object.assign(Object.assign({}, params), params2);
+}
+// console.log(getData({ nama: "Joko", address: "Demak" }, { age: 23 }));
+function getLength(value) {
+    return value.length;
+}
+console.log(getLength("Joko Susilo"));
+console.log(getLength([1, 4, 2, 5, 3]));

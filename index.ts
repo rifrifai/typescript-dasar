@@ -179,5 +179,13 @@ function getNilai<T>(value: T): T {
   return value;
 }
 // console.log(getNilai<string>("Joko Widodo"));
-// console.log(getNilai<number>(99));
-// console.log(getNilai<boolean>(false));
+function getData<T, U>(params: T, params2: U): T & U {
+  return { ...params, ...params2 };
+}
+// console.log(getData({ nama: "Joko", address: "Demak" }, { age: 23 }));
+function getLength<T extends { length: number }>(value: T): number {
+  return value.length;
+}
+console.log(getLength("Joko Susilo"));
+// console.log(getLength(900));
+console.log(getLength([1, 4, 2, 5, 3]));
