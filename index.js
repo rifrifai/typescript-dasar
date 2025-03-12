@@ -139,19 +139,29 @@ function getData(params, params2) {
 function getLength(value) {
     return value.length;
 }
-console.log(getLength("Joko Susilo"));
+// console.log(getLength("Joko Susilo"));
 // console.log(getLength(900));
-console.log(getLength([1, 4, 2, 5, 3]));
+// console.log(getLength([1, 4, 2, 5, 3]));
 // class
 class Biodata1 {
+    // inisialisai nilai saat object dibuat
     constructor(name, age) {
         this.nama = name;
         this.umur = age;
     }
+    // method or function
     Pengenalan() {
         return `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`;
     }
 }
-const rafi = new Biodata1("Rafi", 18);
-console.log(`nama : ${rafi.nama}, umur : ${rafi.umur}`);
-console.log(rafi.Pengenalan());
+class fullBiodata extends Biodata1 {
+    constructor(name, age) {
+        super(name, age);
+    }
+    fullPengenalan() {
+        return `Halo, fungsi ini fullBiodata, nama ${this.nama} dan umur ${this.umur}`;
+    }
+}
+// inisialisasi object
+const rafi = new fullBiodata("Rafi", 18);
+console.log(rafi.fullPengenalan());

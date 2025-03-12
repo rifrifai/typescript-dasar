@@ -192,16 +192,30 @@ function getLength<T extends { length: number }>(value: T): number {
 
 // class
 class Biodata1 {
-  nama: string;
-  umur: number;
+  // properti
+  protected nama: string;
+  protected umur: number;
+  // inisialisai nilai saat object dibuat
   constructor(name: string, age: number) {
     this.nama = name;
     this.umur = age;
   }
-  Pengenalan(): string {
+  // method or function
+  protected Pengenalan(): string {
     return `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`;
   }
+  // visibility = public (default), private (di dalam class only)dan protected (hanya bisa di akses di class extends saja)
 }
-const rafi = new Biodata1("Rafi", 18);
-console.log(`nama : ${rafi.nama}, umur : ${rafi.umur}`);
-console.log(rafi.Pengenalan());
+
+class fullBiodata extends Biodata1 {
+  constructor(name: string, age: number) {
+    super(name, age);
+  }
+  fullPengenalan(): string {
+    return `Halo, fungsi ini fullBiodata, nama ${this.nama} dan umur ${this.umur}`;
+  }
+}
+// inisialisasi object
+const rafi = new fullBiodata("Rafi", 18);
+console.log(rafi.fullPengenalan());
+// console.log(rafi.nama);
