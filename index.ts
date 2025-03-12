@@ -186,6 +186,22 @@ function getData<T, U>(params: T, params2: U): T & U {
 function getLength<T extends { length: number }>(value: T): number {
   return value.length;
 }
-console.log(getLength("Joko Susilo"));
+// console.log(getLength("Joko Susilo"));
 // console.log(getLength(900));
-console.log(getLength([1, 4, 2, 5, 3]));
+// console.log(getLength([1, 4, 2, 5, 3]));
+
+// class
+class Biodata1 {
+  nama: string;
+  umur: number;
+  constructor(name: string, age: number) {
+    this.nama = name;
+    this.umur = age;
+  }
+  Pengenalan(): string {
+    return `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`;
+  }
+}
+const rafi = new Biodata1("Rafi", 18);
+console.log(`nama : ${rafi.nama}, umur : ${rafi.umur}`);
+console.log(rafi.Pengenalan());

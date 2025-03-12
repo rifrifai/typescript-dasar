@@ -140,4 +140,18 @@ function getLength(value) {
     return value.length;
 }
 console.log(getLength("Joko Susilo"));
+// console.log(getLength(900));
 console.log(getLength([1, 4, 2, 5, 3]));
+// class
+class Biodata1 {
+    constructor(name, age) {
+        this.nama = name;
+        this.umur = age;
+    }
+    Pengenalan() {
+        return `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`;
+    }
+}
+const rafi = new Biodata1("Rafi", 18);
+console.log(`nama : ${rafi.nama}, umur : ${rafi.umur}`);
+console.log(rafi.Pengenalan());
